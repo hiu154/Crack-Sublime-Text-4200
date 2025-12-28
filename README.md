@@ -14,8 +14,8 @@ It is suitable for learning PowerShell basics and handling common script-executi
 
 ## System Requirements
 - Windows 11
-- PowerShell 5.1 or later  
-  (PowerShell 7+ recommended)
+- PowerShell Administrator
+
 
 ---
 
@@ -28,4 +28,31 @@ You can resolve it using one of the methods below.
 
 ### Recommended (Current User Only)
 ```powershell
+Running a PowerShell Script on Windows 11
+Option 1: Allow scripts for the current user (recommended)
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+
+When prompted:
+
+Press Y → apply the change
+
+Press N → cancel (no changes made)
+
+Then run the script:
+
+.\SublimePatcher.ps1
+
+Option 2: Run the script once (no policy change)
+
+This method runs the script without modifying the system execution policy:
+
+powershell -ExecutionPolicy Bypass -File .\SublimePatcher.ps1
+
+Notes
+
+RemoteSigned allows locally created scripts to run while keeping basic security.
+
+Bypass affects only this execution and does not persist.
+
+Always review scripts before running them, especially if obtained from external sources.
