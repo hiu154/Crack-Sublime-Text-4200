@@ -50,6 +50,7 @@ powershell
 ```powershell
 This method runs the script without modifying the system execution policy:
 powershell -ExecutionPolicy Bypass -File .\SublimePatcher.ps1
+```
 Notes
 RemoteSigned allows locally created scripts to run while maintaining basic security.
 Bypass affects only the current execution and does not persist.
