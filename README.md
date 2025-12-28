@@ -43,11 +43,12 @@ Press N → cancel (no changes made)
 Then run the script:
 powershell
 .\SublimePatcher.ps1
+```
 
-Option 2: Run the script once (no policy change)
+###Option 2: Run the script once (no policy change)
+
+```powershell
 This method runs the script without modifying the system execution policy:
-
-powershell
 powershell -ExecutionPolicy Bypass -File .\SublimePatcher.ps1
 Notes
 RemoteSigned allows locally created scripts to run while maintaining basic security.
