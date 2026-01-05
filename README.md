@@ -39,10 +39,13 @@ You can resolve it using one of the methods below.
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 When prompted:
 Press Y → apply the change
-Press N → cancel (no changes made)
 Then run the script:
 powershell
 .\SublimePatcher.ps1
+and if it done run again
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+When prompted:
+Press N → apply the change
 ```
 
 ###Option 2: Run the script once (no policy change)
